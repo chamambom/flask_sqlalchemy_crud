@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% extends "layout.html" %}
+{% block body %}
+
+
+ <form action="{{ url_for('update_entry',user_id=users.id) }}" method=post class=add-entry>
+
+    <input type="text" value="{{ users.id }}" name="id">
+    <input type="text" value="{{ users.name }}" name="name">
+    <input type="text" value="{{ users.email }}" name="email">
+    <input type="text" value="{{ users.description }}" name="description">
+    <input type=submit value=Update class="button">
+  </form>
+
+{% endblock %}
+
+
+
+</body>
+</html>
